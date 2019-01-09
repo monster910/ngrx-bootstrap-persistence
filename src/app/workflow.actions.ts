@@ -1,14 +1,15 @@
 import { Action } from '@ngrx/store';
 
 export enum ActionTypes {
-  WorkflowAction = 'WorkflowAction',
+  WorkflowAction = 'WorkflowAction'
 }
 
 export class WorkflowAction implements Action {
-  readonly type = ActionTypes.WorkflowAction;
 
-  constructor(public event: any) {
+  constructor(public type: ActionTypes, public event: any, public persist?: boolean) {
+    this.type = type;
     this.event = event;
+    this.persist = persist;
   }
 
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { WorkflowAction } from './workflow.actions';
+import {ActionTypes, WorkflowAction} from './workflow.actions';
 import {select, Store} from '@ngrx/store';
 import {Observable} from 'rxjs';
 
@@ -22,6 +22,6 @@ export class AppComponent {
   }
 
   public beforeChange(event) {
-    this.store.dispatch(new WorkflowAction({event: event}));
+    this.store.dispatch(new WorkflowAction(ActionTypes.WorkflowAction, {event: event}, true));
   }
 }

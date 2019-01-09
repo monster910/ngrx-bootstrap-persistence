@@ -3,8 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {NgbModule, NgbTabsetModule} from '@ng-bootstrap/ng-bootstrap';
-import {StoreModule} from '@ngrx/store';
+import {MetaReducer, StoreModule} from '@ngrx/store';
 import {workflowReducer} from './workflowReducer';
+import {debug} from './debugReducer';
+import {persistenceReducer} from './persistenceReducer';
+
+export const metaReducers: MetaReducer<any>[] = [debug, persistenceReducer];
 
 @NgModule({
   declarations: [
@@ -14,7 +18,7 @@ import {workflowReducer} from './workflowReducer';
     BrowserModule,
     NgbModule,
     NgbTabsetModule,
-    StoreModule.forRoot({workflow: workflowReducer})
+    StoreModule.forRoot({workflow: workflowReducer}, {metaReducers})
   ],
   providers: [],
   bootstrap: [AppComponent]
