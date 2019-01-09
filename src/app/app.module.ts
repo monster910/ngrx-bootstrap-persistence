@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {MetaReducer, StoreModule} from '@ngrx/store';
-import {workflowReducer} from './workflowReducer';
-import {debug} from './debugReducer';
-import {persistenceReducer} from './persistenceReducer';
+import {workflowReducer} from '../state-mgmt/workflowReducer';
+import {debug} from '../state-mgmt/debugReducer';
+import {persistenceReducer} from '../state-mgmt/persistenceReducer';
 import {RouterModule, Routes} from '@angular/router';
 import {routerReducer, StoreRouterConnectingModule} from '@ngrx/router-store';
 

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {select, Store} from '@ngrx/store';
 import {Observable} from 'rxjs';
-import {ActionTypes, WorkflowAction} from '../../app/workflow.actions';
+import {ActionTypes, WorkflowAction} from '../../state-mgmt/workflow.actions';
 
 @Component({
   selector: 'dashboard',
