@@ -1,5 +1,8 @@
 # NgrxBootstrapPersistence
 
+This is a simple project to illustrate event processing and state management via NGRX to save the state
+of a bootstrap component in local storage.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
 
 ## Development server
