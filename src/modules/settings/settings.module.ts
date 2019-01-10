@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 // containers
 import { SettingsComponent } from './settings.component';
+import {CommonModule} from '@angular/common';
 
 // routes
 export const ROUTES: Routes = [
@@ -11,6 +12,7 @@ export const ROUTES: Routes = [
 
 @NgModule({
   imports: [
+    CommonModule,
     RouterModule.forChild(ROUTES)
   ],
   declarations: [
