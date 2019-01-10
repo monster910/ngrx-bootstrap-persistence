@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import {select, Store} from '@ngrx/store';
-import {Observable} from 'rxjs';
+import {Component} from '@angular/core';
+import {Store} from '@ngrx/store';
 import {ActionTypes, WorkflowAction} from '../../state-mgmt/workflow.actions';
 
 @Component({
@@ -8,15 +7,8 @@ import {ActionTypes, WorkflowAction} from '../../state-mgmt/workflow.actions';
   templateUrl: './dashboard.component.html'
 })
 export class DashboardComponent {
-  workflow$: Observable<any>;
 
   constructor(private store: Store<any>) {
-    this.workflow$ = store.pipe(select('workflow'));
-
-    // watch for changes
-    this.workflow$.subscribe(workflow => {
-      console.log(workflow);
-    });
   }
 
   public beforeChange(event) {
